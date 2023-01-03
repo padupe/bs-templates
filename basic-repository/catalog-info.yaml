@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: ${{ values.kind }}
+metadata:
+  name: ${{ values.repositoryName }}
+  description: ${{ values.description }}
+  annotations:
+    github.com/project-slug: ${{ values.orgName }}/${{ values.repositoryName }}
+spec:
+  type: ${{ values.appType }}
+  owner: group:${{ values.repoOwner }}
+  system: ${{ values.mainProject }}
+  lifecycle: development
+  ${{ vaklues.definition }}
