@@ -6,8 +6,8 @@ metadata:
   annotations:
     github.com/project-slug: ${{ values.orgName }}/${{ values.repositoryName }}
 spec:
-  type: ${{ values.appType }}
+  type: ${{ values.specType }}
   owner: group:${{ values.repoOwner }}
   system: ${{ values.mainProject }}
   lifecycle: development
-  ${{ vaklues.definition }}
+  ${{ values.definition }}
